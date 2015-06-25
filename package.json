@@ -1,0 +1,30 @@
+{
+  "name": "cram",
+  "version": "0.0.0",
+  "description": "to cram for a front-end job interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aprilorange/cram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aprilorange/cram/issues"
+  },
+  "homepage": "https://github.com/aprilorange/cram#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cson": "^0.3.0",
+    "gulp-serve": "^1.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.5",
+    "gulp-swig": "^0.7.4",
+    "gulp-uglify": "^1.2.0",
+    "marked": "^0.3.3"
+  }
+}

@@ -1,0 +1,33 @@
+.animated 
+  display block !important
+  -webkit-animation-duration 1s
+  animation-duration 1s
+  -webkit-animation-fill-mode both
+  animation-fill-mode both
+
+.fadeInUp 
+  -webkit-animation-name fadeInUp
+  animation-name fadeInUp
+
+.fadeOutUp 
+  -webkit-animation-name fadeOutUp
+  animation-name fadeOutUp
+
+
+@keyframes fadeInUp
+  0%
+    opacity 0
+    transform: translateY(20px)
+
+  100%
+    opacity 1
+    transform: translateY(0)
+
+@keyframes fadeOutUp
+  0%
+    opacity 1
+    transform: translateY(0)
+
+  100%
+    opacity 0
+    transform translateY(-20px)

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cram</title>
+    <link rel="stylesheet" href="./build/css/main.css">
+  </head>
+  <body>
+    <div id="output"></div>
+    {% raw %}
+    <script id="home-template" type="text/template">
+      <header class="header">
+        <h1 class="site-title">
+          <a href="./">Cram <span>by INSEKAI</span></a>
+        </h1>
+        <h2 class="site-description">前端基础知识补完计划</h2>
+      </header>
+      <section class="tabs">
+        <a href="#!html" data-hover="HTML" class="tab">HTML</a>
+        <a href="#!css" data-hover="CSS" class="tab">CSS</a>
+        <a href="#!javascript" data-hover="JavaScript" class="tab">JavaScript</a>
+        <a href="#!more" data-hover="...More" class="tab">...More</a>
+      </section>
+    </script>
+    <script id="header-template" type="text/template">
+      <header class="global-header">
+        <div class="container">
+          <h1 class="site-title"><a href="./">Cram</a></h1>
+        </div>
+      </div>
+    </script>
+    <script id="list-template" type="text/template">
+      <div class="list container">
+      {{#list}}
+        <div class="item item-{{@index}}" data-index="{{@index}}">
+          <div class="item-q">{{{q}}}</div>
+          <div class="item-a">{{{a}}}</div>
+          <div class="item-opt">
+            <span class="toggleAnswer">toggle answer</span>
+          </div>
+          {{#ifCond @index 'isnt' 0}}
+            <a class="btn" href="#!{{../../topPath}}/{{math @index '-' 1}}">Prev</a>
+          {{/ifCond}}
+          {{#ifCond @index 'isnt' ../length}}
+          <a class="btn" href="#!{{../../topPath}}/{{math @index '+' 1}}">Next</a>
+          {{/ifCond}}
+        </div>
+      {{/list}}
+      </div>
+    </script>
+    <script id="more-template" type="text/template">
+    <div class="container">
+      <a href="https://github.com/aprilorange/cram">GitHub Repo</a>
+    </div>
+    </script>
+    {% endraw %}
+    <script src="./build/js/vendor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+@import 'normalize'
+@import 'vars'
+@import 'mixins'
+@import 'animate'
+
+body 
+  background-color #52be7f
+  color $acolor
+  font 15px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"
+
+h1,h2,h3,h4,h5,ul
+  margin 0
+
+*
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
+ul,ol
+  padding-left 28px
+
+a
+  color $acolor
+  text-decoration none
+
+.container
+  max-width 620px
+  margin 0 auto
+
+.header
+  padding 40px 0 20px 0
+  text-align center
+  text-shadow 0 0 1px rgba(255, 255, 255, 0.75)
+  .site-title
+    display inline-block
+    font-weight 400
+    font-size 40px
+    padding 5px 30px
+    a
+      display block
+    span
+      font-size 18px
+  .site-description
+    margin-top 20px
+    font-size 24px
+    opacity .85
+
+.tabs
+  text-align center
+  padding-top 20px
+  .tab
+    display inline-block
+    padding 10px 0
+    color $acolor
+    border-top 2px solid @color
+    margin 15px 25px
+    position relative
+    font-size 1.35em
+    &:before
+      position absolute
+      top 0
+      left 0
+      overflow hidden
+      padding @padding
+      max-width 0
+      border-bottom @border
+      color #fff
+      content attr(data-hover)
+      transition(max-width 0.5s)
+    &:hover
+      &:before
+        max-width 100%
+
+.global-header
+  background-color rgba(255, 255, 255, 0.1)
+  height 44px
+  line-height 44px
+  .site-title
+    font-weight 300
+    font-size 20px
+    opacity .6
+    a
+      color white
+
+.list
+  position relative
+
+.item
+  display none
+  .item-q
+    padding 20px 0
+    font-size 30px
+  .item-a
+    display none
+    font-size 26px
+  .item-opt
+    margin-bottom 30px
+    .toggleAnswer
+      cursor pointer
+      color $blurWhite
+
+.btn
+  border 3px solid #fff
+  font-family inherit
+  font-size inherit
+  color white
+  background none
+  cursor pointer
+  padding 5px 50px
+  display inline-block
+  text-transform uppercase
+  letter-spacing 1px
+  font-weight 700
+  outline none
+  position relative
+  overflow hidden
+  opacity .8
+  &:after
+    content ''
+    position absolute
+    width 0
+    height 103%
+    top 50%
+    left 50%
+    background #fff
+    opacity 0
+    transition(all 0.3s)
+    transform(translateX(-50%) translateY(-50%))
+    z-index -1
+  &:hover
+    color $acolor
+    &:after
+      width 90%
+      opacity 1
+
+pre
+  font-size 16px
+  line-height 1.4
+  word-wrap normal
+  font-family Consolas, "Liberation Mono", Menlo, Courier, monospace
