@@ -1,5 +1,6 @@
 # cram
-to cram for a front-end job interview
+
+![preview](http://s1.momo.moda/2015/06/25/19b650660b253761af189682e03501dd.png)
 
 ## Development
 
